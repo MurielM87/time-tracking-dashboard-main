@@ -1,0 +1,83 @@
+.section_cards {
+  display: flex;
+  flex-direction: row;
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    flex-direction: column;
+  }
+
+  .component_card {
+    width: 20vw;
+    margin: 30px;
+    border-radius: 20px;
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+      width: 90%;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+
+    .header_background {
+      border-radius: 20px;
+      height: 40px;
+      position: relative;
+
+      .icon {
+        width: 50px;
+        position: absolute;
+        right: 10%;
+      }
+    }
+
+    .card_info {
+      background-color: $dark_blue;
+      border-radius: 20px;
+      &:hover {
+        cursor: pointer;
+        background-color: $desaturated_blue;
+      }
+
+      .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px;
+
+        h2 {
+          font-size: 18px;
+          margin-top: 10px;
+        }
+        .menu_ellipsis {
+          height: 5px;
+        }
+      }
+
+      .daily,
+      .weekly,
+      .monthly {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        padding-bottom: 20px;
+
+        .hours_daily,
+        .hours_weekly,
+        .hours_monthly {
+          font-size: 60px;
+          margin-bottom: 15px;
+        }
+        .previous_daily,
+        .previous_weekly,
+        .previous_monthly {
+          font-size: 15px;
+        }
+      }
+
+      .weekly {
+        display: none;
+      }
+      .monthly {
+        display: none;
+      }
+    }
+  }
+}

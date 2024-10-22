@@ -1,0 +1,77 @@
+header {
+  width: 20%;
+  background-color: $blue;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 35px 0px 60px 90px;
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    margin: 20px auto;
+    width: 90%;
+  }
+
+  .presentation {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+      display: flex;
+      flex-direction: row;
+      margin: 20px;
+    }
+
+    #img_user {
+      width: 80px;
+      border: 4px solid $white;
+      border-radius: 50%;
+      margin: 25px 60px 40px 25px;
+      @media screen and (max-width: map-get($breakpoints, mobile)) {
+        margin: auto;
+      }
+    }
+    .name {
+        @media screen and (max-width: map-get($breakpoints, mobile)) {            
+        display: flex;
+        flex-direction: column;
+        }
+
+        p {
+      font-size: 14px;
+      font-weight: 400;
+      margin-left: 25px;
+      margin-bottom: 10px;
+      @media screen and (max-width: map-get($breakpoints, mobile)) {
+        font-size: 12px;
+        margin: 0;
+      }
+    }
+    h1 {
+      font-size: 30px;
+      font-weight: 400;
+      margin: 0 100px 80px 25px;
+      @media screen and (max-width: map-get($breakpoints, mobile)) {
+        font-size: 20px;
+        margin: 0;
+      }
+    }
+    }
+    
+  }
+
+  nav {
+    background-color: $dark_blue;
+    border-radius: 0 0 20px 20px;
+    padding: 20px;
+    line-height: 40px;
+    color: $pale_blue;
+    &:hover {
+      color: $white;
+      cursor: pointer;
+    }
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+        font-size: 15px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+
+    .container {
+        width: 1460px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        background-color: $very_dark_blue;
+        color: $white;
+
+        @media screen and (max-width: map-get($breakpoints, mobile)) {
+            width: 100%;
+            flex-direction: column;
+        }
+    }
+}

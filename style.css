@@ -1,0 +1,252 @@
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+}
+body .container {
+  width: 1460px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  background-color: hsl(226, 43%, 10%);
+  color: hsl(0, 0%, 100%);
+}
+@media screen and (max-width: 375px) {
+  body .container {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+header {
+  width: 20%;
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 35px 0px 60px 90px;
+}
+@media screen and (max-width: 375px) {
+  header {
+    margin: 20px auto;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 375px) {
+  header .presentation {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+  }
+}
+header .presentation #img_user {
+  width: 80px;
+  border: 4px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  margin: 25px 60px 40px 25px;
+}
+@media screen and (max-width: 375px) {
+  header .presentation #img_user {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 375px) {
+  header .presentation .name {
+    display: flex;
+    flex-direction: column;
+  }
+}
+header .presentation .name p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 375px) {
+  header .presentation .name p {
+    font-size: 12px;
+    margin: 0;
+  }
+}
+header .presentation .name h1 {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 100px 80px 25px;
+}
+@media screen and (max-width: 375px) {
+  header .presentation .name h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+}
+header nav {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 0 0 20px 20px;
+  padding: 20px;
+  line-height: 40px;
+  color: hsl(236, 100%, 87%);
+}
+header nav:hover {
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+@media screen and (max-width: 375px) {
+  header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+#work_card {
+  background-color: hsl(15, 100%, 70%);
+}
+#work_card .header_background {
+  background-color: hsl(15, 100%, 70%);
+}
+
+#play_card {
+  background-color: hsl(195, 74%, 62%);
+}
+#play_card .header_background {
+  background-color: hsl(195, 74%, 62%);
+}
+
+#study_card {
+  background-color: hsl(348, 100%, 68%);
+}
+#study_card .header_background {
+  background-color: hsl(348, 100%, 68%);
+}
+
+#exercise_card {
+  background-color: hsl(145, 58%, 55%);
+}
+#exercise_card .header_background {
+  background-color: hsl(145, 58%, 55%);
+}
+
+#social_card {
+  background-color: hsl(264, 64%, 52%);
+}
+#social_card .header_background {
+  background-color: hsl(264, 64%, 52%);
+}
+
+#selfcare_card {
+  background-color: hsl(43, 84%, 65%);
+}
+#selfcare_card .header_background {
+  background-color: hsl(43, 84%, 65%);
+}
+
+.section_cards {
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 375px) {
+  .section_cards {
+    flex-direction: column;
+  }
+}
+.section_cards .component_card {
+  width: 20vw;
+  margin: 30px;
+  border-radius: 20px;
+}
+@media screen and (max-width: 375px) {
+  .section_cards .component_card {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}
+.section_cards .component_card .header_background {
+  border-radius: 20px;
+  height: 40px;
+  position: relative;
+}
+.section_cards .component_card .header_background .icon {
+  width: 50px;
+  position: absolute;
+  right: 10%;
+}
+.section_cards .component_card .card_info {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 20px;
+}
+.section_cards .component_card .card_info:hover {
+  cursor: pointer;
+  background-color: hsl(235, 45%, 61%);
+}
+.section_cards .component_card .card_info .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+.section_cards .component_card .card_info .title h2 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+.section_cards .component_card .card_info .title .menu_ellipsis {
+  height: 5px;
+}
+.section_cards .component_card .card_info .daily,
+.section_cards .component_card .card_info .weekly,
+.section_cards .component_card .card_info .monthly {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  padding-bottom: 20px;
+}
+.section_cards .component_card .card_info .daily .hours_daily,
+.section_cards .component_card .card_info .daily .hours_weekly,
+.section_cards .component_card .card_info .daily .hours_monthly,
+.section_cards .component_card .card_info .weekly .hours_daily,
+.section_cards .component_card .card_info .weekly .hours_weekly,
+.section_cards .component_card .card_info .weekly .hours_monthly,
+.section_cards .component_card .card_info .monthly .hours_daily,
+.section_cards .component_card .card_info .monthly .hours_weekly,
+.section_cards .component_card .card_info .monthly .hours_monthly {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+.section_cards .component_card .card_info .daily .previous_daily,
+.section_cards .component_card .card_info .daily .previous_weekly,
+.section_cards .component_card .card_info .daily .previous_monthly,
+.section_cards .component_card .card_info .weekly .previous_daily,
+.section_cards .component_card .card_info .weekly .previous_weekly,
+.section_cards .component_card .card_info .weekly .previous_monthly,
+.section_cards .component_card .card_info .monthly .previous_daily,
+.section_cards .component_card .card_info .monthly .previous_weekly,
+.section_cards .component_card .card_info .monthly .previous_monthly {
+  font-size: 15px;
+}
+.section_cards .component_card .card_info .weekly {
+  display: none;
+}
+.section_cards .component_card .card_info .monthly {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
